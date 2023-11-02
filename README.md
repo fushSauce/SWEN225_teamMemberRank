@@ -4,11 +4,11 @@
 
 - Students submit their rankings in the form of a `json` file with the filename being their student id + json file extension.
 - Markers can then download these to single directory and run `java -jar getRanks.jar <dirWithRankings>/*.json`
-  which will output `json` to `stdout`
+  which will output `json` of median ranks of team members to `stdout` 
 
 ## Demo
 
-- Given a directory with students that gave `id1` a full range of ranks (1-5) with everyone else receiving 5,
+- Given a directory with students (`id1.json`,...,`id5.json`) that gave student `id1` a full range of ranks (1-5) with everyone else receiving 5,
 we'd expect to see final ranks showing id1 having a median rank of 3 with everyone else having a final rank of 5.
 - This can be seen [TestRankAnalysisUtils.java](./src/test/java/TestRankAnalysisUtils.java)'s `testGetFinalRanks()` method.
 - Or can be manually tested using `GetRanks` picocli interface, using demo files in [](./src/test/resources)
